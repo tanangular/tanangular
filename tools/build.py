@@ -126,15 +126,16 @@ def header(theme):
     b.append(label(t, "TANANGULAR  /  @COOLDEZIGN", 72, 86, 0.2))
     b.append(label(t, "ARTBOARD 01  ·  TH  ·  UTC+7", W-72, 86, 0.4, anchor="end"))
     # big name: outline draws, then fills
-    d, wname = T.path("Tan", "serif_i", 236, 64, 300)
+    NS, NY = 146, 272
+    d, wname = T.path("tanangular", "serif_i", NS, 64, NY)
     b.append(f'<path class="draw" pathLength="1" style="animation-delay:.5s;animation-duration:2.4s" fill="none" stroke="{t["ink"]}" stroke-width="1.4" d="{d}"/>')
     b.append(f'<path class="fillin" style="animation-delay:2.1s" fill="{t["ink"]}" d="{d}"/>')
-    dd, _ = T.path(".", "serif_i", 236, 64+wname-6, 300)
+    dd, _ = T.path(".", "serif_i", NS, 64+wname-4, NY)
     b.append(f'<path class="pop" style="animation-delay:2.6s" fill="{t["pink"]}" d="{dd}"/>')
     # annotation next to the name (designer redline)
-    ax = 64 + wname + 70
-    b.append(f'<path class="draw" pathLength="1" style="animation-delay:2.8s;animation-duration:1s" fill="none" stroke="{t["pink"]}" stroke-width="1.2" d="M{ax} 214 h44 M{ax} 206 v16 M{ax+44} 206 v16"/>')
-    g, _ = text_stagger("fig. 01, the human", "serif_i", 24, ax+58, 222, t["pink"], 3.0, step=0.025)
+    ax = 70
+    b.append(f'<path class="draw" pathLength="1" style="animation-delay:2.8s;animation-duration:1s" fill="none" stroke="{t["pink"]}" stroke-width="1.2" d="M{ax} 138 h44 M{ax} 130 v16 M{ax+44} 130 v16"/>')
+    g, _ = text_stagger("fig. 01, the human", "serif_i", 24, ax+58, 146, t["pink"], 3.0, step=0.025)
     b.append(g)
     g, _ = text_stagger("a dev with a design obsession.", "grotesk", 34, 70, 358, t["ink"], 2.9, step=0.022, wght=500, ls=-0.4)
     b.append(g)
@@ -149,7 +150,7 @@ def header(theme):
     b.append(ico(t, cx, cy, r))
     b.append(label(t, "ICOSPHERE · SUBDIV 0", cx, cy+r+40, 2.4, anchor="middle", size=11))
     b.append("</g>")
-    return svg(W, H, "".join(b), title="Tan, a dev with a design obsession")
+    return svg(W, H, "".join(b), title="tanangular, a dev with a design obsession")
 
 # ---------------- divider ----------------
 def divider(theme):

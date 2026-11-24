@@ -1,11 +1,11 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-    <img src="assets/header-light.svg" width="100%" alt="Tan. A dev with a design obsession.">
+    <img src="assets/header-light.svg" width="100%" alt="tanangular. A dev with a design obsession.">
   </picture>
 </p>
 
-### hey, I'm Tan
+### hey, I'm tanangular
 
 I write code for a living and design whenever nobody stops me. If something looks beautiful or a little bit cool, I have to know how it was made, and then I want to build my own version.
 
